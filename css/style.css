@@ -35,6 +35,7 @@ header {
     align-items: center;
     gap:10px;
     max-inline-size: 65ch;
+    text-align: center;
 }
 
 h1 {
