@@ -1,0 +1,138 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Grey500: rgb(76, 78, 97);
+    --Grey400: hsl(210, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+    --shawdo: rgba(76, 78, 97,25%);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--White)
+}
+
+body {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 200;
+    color:var(--Grey400);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    padding:60px 30px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    max-inline-size: 65ch;
+}
+
+h1 {
+    font-weight: 200;
+    line-height: 1;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.dark {
+    color: var(--Grey500);
+}
+
+header p {
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap:10px;
+    width:100%;
+    height: fit-content;
+    padding: 40px 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px var(--shawdo);
+}
+
+.cyan {
+    border-top: 5px solid var(--Cyan);
+}
+
+.red {
+    border-top: 5px solid var(--Red);
+}
+
+.orange {
+    border-top: 5px solid var(--Orange);
+}
+
+.blue {
+    border-top: 5px solid var(--Blue);
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.icon {
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width: 1150px) { /* Styles pour les ordinateurs */
+
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding: 50px 100px;
+    }
+    .cyan {
+        grid-column:1;
+        grid-row: 1/3;
+    }
+    .red {
+        grid-column:2;
+        grid-row: 1;
+    }
+    .orange {
+        grid-column:2;
+        grid-row: 2;
+    }
+    .blue {
+        grid-column:3;
+        grid-row: 1/3;
+    }
+    .container {
+        max-width: 430px;
+    }
+
+  }
